@@ -1,0 +1,25 @@
+{
+  "name": "salaam-react",
+  "version": "1.0.0",
+  "description": "this is learning project",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waseemfarooq47/namaste-react.git"
+  },
+  "keywords": [
+    "abc"
+  ],
+  "author": "waseem farooq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waseemfarooq47/namaste-react/issues"
+  },
+  "homepage": "https://github.com/waseemfarooq47/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
