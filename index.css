@@ -1,4 +1,184 @@
-body{
-    background: #212121;
-    color: #fcf1f1
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Inter:wght@400;500;600;700&family=Kaushan+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.app-container{
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    background: #ff5A00;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.logo-container h1{
+    font-family: "Kaushan Script", cursive;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fcfdcb;
+
+    span{
+        font-size: 55px;
+    }
+}
+
+header nav ul{
+    display: flex;
+    li{
+        list-style: none;
+        padding-left: 20px;
+        font-weight: 600;
+        cursor:pointer;
+        color: #fcfdcb;
+
+        i{
+            font-size: 25px;
+        }
+    }
+}
+
+.app-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(255, 245, 249);
+    height: 464px;
+    .order-text-bottom{
+        font-weight: 400;
+    }
+
+    .search{
+        height: 50px;
+        border-radius: 5px;
+        border: 1px solid #ced4da ;
+        min-width: 500px;
+        text-indent: 10px;
+        outline: none;
+        box-shadow: none;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .search:focus{
+        outline: none;
+        box-shadow: none;
+        border: 2px solid #ced4da ;
+    }
+}
+
+
+.cards-panel{
+    width: 80%;
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    color: black;
+    margin: 60px auto;
+
+    .card{
+        width: 350px;
+        height: 420px;
+        border: 2px solid #ced4da ;
+        border-radius: 5px;
+        /* overflow: hidden; */
+
+        .card-img{
+            width: 100%;
+            height: 250px;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .res-details{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap:10px;
+            padding: 10px 15px;
+
+            .cuisine{
+                font-weight: 400;
+                font-size: 14px;
+                color: #7c7a7a;
+            }
+        }
+
+        .res-rating{
+            font-weight: 600;
+            span{
+                font-weight: 400;
+            }
+        }
+
+
+    }
+}
+
+.filter-btn{
+    background-color: #ff5A00;
+    width: 300px;
+    height: 40px;
+    color: #fcfdcb;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .f-copy {
+    margin: 0;
+  }
+  
+  .f-nav {
+    margin-top: 10px;
+  }
+  
+  .f-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .f-nav a:hover {
+    color: #ffcc00;
+  }

@@ -73,4 +73,56 @@ NPX is a package executer that is used to directly execute Javascript packages w
 -TreeShaking - remove unused code for you
 -Different dev and prod bundles
 
-> > in build remove
+> > in build removeworking
+
+## Core React
+
+react.createElement => reactElement (JS Object) => HTMLElement(render)
+
+## JSX
+
+it is not a html in JS or javascript where we write HTML rather It is html like syntax.
+JSX is (transpiled) before it reaches to JS engine >> parcel does that by giving job to Babel(package) >> it converts it as JS engine understands it.
+
+## Babel
+
+Babel is javascript Compiler
+
+## working JSX
+
+JSX => react.createElement =>reactElement(JS Object) => HTMLElement(render)
+
+## Components in React
+
+-Class based component {old way to code}
+-Functional component {new way to code} React Functional component is normal JS function which "returns" some JSX elements or react elements
+-prevents crosssite scripting attacks. It snaitizes data. (takes care of mallicious data)
+
+## config Driven UI
+
+A config-driven UI, short for configuration-driven user interface, refers to a design approach where the user interface (UI) elements and behavior are primarily determined by configuration files rather than hardcoded into the application's codebase.
+
+## Optional Chaining
+
+In JavaScript, the optional chaining operator ?. is used to safely access nested properties or methods of an object. If any intermediate property or method in the chain is null or undefined, the expression short-circuits and returns undefined instead of throwing an error.
+
+## 2 types of export
+
+### Default Export / Import
+
+- Default export ==> export default filename for default single export
+
+### Named Export / Import
+
+-we can write "export" before it
+
+- Name export ==> export const URL_LINK =[] for multiple exports we use {}
+
+## React Hooks
+
+- Normal JS Utility Functions
+
+## Mostly Common hooks
+
+- useState -- super powerful react variables
+- useEffect

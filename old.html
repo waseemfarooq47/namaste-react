@@ -13,10 +13,26 @@
     <script>
       const div = document.createElement("div");
       div.id = "root";
-      const h1=document.createElement("h1")
-      h1.innerText="Hello Javascript DOM"
-      div.appendChild(h1)
+      const h1 = document.createElement("h1");
+      h1.innerText = "Hello Javascript DOM";
+      div.appendChild(h1);
       document.body.appendChild(div);
+
+      // Lesson 2 CORE OF REACT
+      const parent = React.createElement("div", { id: "parent" }, [
+        React.createElement("div", { id: "child" }, [
+          React.createElement("h1", {}, "Salaam from React module"),
+          React.createElement("h2", {}, "heading h2"),
+        ]),
+        React.createElement("div", { id: "child2" }, [
+          React.createElement("h1", {}, "heading h1"),
+          React.createElement("h2", {}, "HAppy to see This!!"),
+        ]),
+      ]);
+
+      console.log(parent);
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(parent);
     </script>
   </body>
 </html>

@@ -1,0 +1,1 @@
+export const FONTAWESOME_LINK = "@fortawesome/fontawesome-free/css/all.min.css";
