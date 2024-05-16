@@ -1,22 +1,25 @@
 import React from "react";
+import { CDN_URL } from "../utils/constants";
 
 const Cards = (props) => {
   const { resDetails } = props;
-  const { image, cuisine, rating, phone, name } = resDetails?.data;
+  const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla } =
+    resDetails?.info;
   return (
     <div className="card">
       <div className="card-img">
-        <img src={image} alt="biryni" />
+        <img src={CDN_URL + cloudinaryImageId} alt="biryni" />
       </div>
       <div className="res-details">
         <h2 className="res-name">{name}</h2>
-        <span className="cuisine">{cuisine}</span>
+        <span className="cuisine">{cuisines.join(", ")}</span>
         <h4 className="res-rating">
-          Rating : <span>{rating}</span>
+          Rating : <span>{avgRating}</span>
         </h4>
         <h4 className="res-rating">
-          Phone : <span>{phone}</span>
+          Delivery Time : <span>{sla.slaString}</span>
         </h4>
+        <h4 className="res-rating">{costForTwo}</h4>
       </div>
     </div>
   );

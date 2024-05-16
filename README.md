@@ -125,4 +125,16 @@ In JavaScript, the optional chaining operator ?. is used to safely access nested
 ## Mostly Common hooks
 
 - useState -- super powerful react variables
-- useEffect
+- useEffect -- will be called after the componenet has been rendered. It has 3 cases:
+# use state hook cases
+- 1.if no dependency array => use effect is called on every render.
+- 2.if with empty dpendency array[] => useEffect is called on initial render(just once).
+- 2.if dependency array[values] => useEffect is called everytime when the value array[values] is changed.
+
+## Shimmer UI
+
+- fake page till api loads
+
+## change in state
+
+- Whenever state variables update, react triggers a reconciliation cycle(re-renders the component)
