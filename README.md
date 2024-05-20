@@ -124,9 +124,17 @@ In JavaScript, the optional chaining operator ?. is used to safely access nested
 
 ## Mostly Common hooks
 
-- useState -- super powerful react variables
-- useEffect -- will be called after the componenet has been rendered. It has 3 cases:
-# use state hook cases
+# useState -- super powerful react variables
+
+# useSatte hook cases
+
+1.Never use usestate hook in condition.
+2.Always use higher hierarchy
+
+# useEffect -- will be called after the componenet has been rendered. It has 3 cases:
+
+# useEffect hook cases
+
 - 1.if no dependency array => use effect is called on every render.
 - 2.if with empty dpendency array[] => useEffect is called on initial render(just once).
 - 2.if dependency array[values] => useEffect is called everytime when the value array[values] is changed.
@@ -138,3 +146,131 @@ In JavaScript, the optional chaining operator ?. is used to safely access nested
 ## change in state
 
 - Whenever state variables update, react triggers a reconciliation cycle(re-renders the component)
+
+## ROuting is odf 2 types
+
+- Server Side routing
+- Client Side routing
+
+## L7 React router dom
+
+- createBrowsRouter
+- RouterProvider
+- Link (acts as <a> tag)
+
+## Dynamic routing
+
+## CLASS COMPONENTS
+
+## why do we use super props in react class
+
+-In React, the super keyword is used in a constructor of a class component to call the constructor of its parent class. This is especially important when extending the React.Component class.
+
+## Class lifecycle
+
+- Whenever the class is instantiated
+
+1.  constructor is called then
+2.  Render is called
+
+## Parent Class lifecycle
+
+Parent Constructor => render
+
+## Child Class lifecycle
+
+child Constructor => render
+
+## ComponentDidMount lifecycle
+
+constructor => render => componentDidMount
+
+## why API calls are made in componentDidMount in classes
+
+=>load component => api => renderdata
+
+## IF parent and child classes how methods are called {interview question}
+
+1. parent constructor called=> parent render called where it finds child component then it will gp to child component and
+2. child constructor called=> child render called => child ComponnetDidMount called and then back
+3. parent ComponentDidMount is at last called.
+
+# if there are multiple child
+
+1. parent constructor called=> parent render called where it finds child components then it will gp to child component and
+2. all child constructors called=> all child renders called =>
+3. all child ComponnetDidMount are called and then back
+4. parent ComponentDidMount is at last called.
+
+############################################################################################
+
+## LIFE CYCLE PHASE START
+
+-Parent constructor
+-Parent render
+
+--First child constructor
+--First child render
+
+--Second child constructor
+--Second child render
+
+## {=> this is Render Phase} all diff algo is done about to update
+
+< HERE DOM UPDATED IN SINGLE BATCH >
+
+## {=> this is Commit Phase}
+
+--First child component mount
+--Second chils component mount
+
+-Parent component mount
+
+## LIFE CYCLE PHASE ENDS
+
+############################################################################################
+
+# 3 PHASES OF CYCLE
+
+## 1.MOUNTING PHASE
+
+-Constructor(dummy data)
+-render (dummy data)
+< HTML dummy data >
+-ComponentDidMount
+-API
+-< this.state >
+
+## 2.UPDATING PHASE
+
+-render API
+-< HTML loaded with new API data>
+-Update cycle happens
+-ComponenetDidUpdate
+
+## 3.UNMOUNT PHASE
+
+it means when to disapper html from UI as I redirect new page ComponentWillUnmount is invoked
+
+############################################################################################
+
+## SOLID design principles
+The SOLID design principles help us create maintainable, reusable, and flexible software designs. 
+Each letter in the acronym SOLID stands for a specific principle.
+
+Here is what each letter in the acronym stands for:
+
+S: Single responsibility principle.
+O: Open–closed principle.
+L: Liskov substitution principle.
+I: Interface segregation principle.
+D: Dependency inversion principle.
+
+
+## The Single Responsibility Principle (SRP)
+
+The idea behind the SRP is that every class, module, or function in a program should have one
+responsibility/purpose in a program. As a commonly used definition, "every class should have
+only one reason to change".
+
+=> Custom Hooks

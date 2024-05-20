@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import Cards from "./Cards";
 import { useState, useEffect } from "react";
-import resList from "../utils/mockData";
+import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Body = () => {
   const [mylist, setMyList] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [searchText, setSearchText] = useState("");
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -17,9 +19,9 @@ const Body = () => {
     );
     const json = await data.json();
 
-    // console.log(
-    //   json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
-    // );
+    console.log(
+      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+    );
     setMyList(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -31,6 +33,15 @@ const Body = () => {
   // if (mylist.length === 0) {
   //   return ;
   // }
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) {
+    return (
+      <div className="offline-wrapper">
+        {/* <img src={OfflineImage} alt="offline" /> */}
+        <h1>Soory Connection lost. Check internet connection!</h1>
+      </div>
+    );
+  }
 
   return mylist.length === 0 ? (
     <Shimmer />
@@ -76,7 +87,9 @@ const Body = () => {
 
       <div className="cards-panel">
         {filteredData.map((restaurant) => (
-          <Cards key={restaurant.info.id} resDetails={restaurant} />
+          <Link to={"restaurants/" + restaurant.info.id}>
+            <Cards key={restaurant.info.id} resDetails={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

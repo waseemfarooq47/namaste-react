@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Inter:wght@400;500;600;700&family=Kaushan+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+:root{
+    --font-primary:#fcfdcb;
+    --theme-primary: #ff5A00;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    a{
+        text-decoration: none;
+    }
 }
 
 .app-container{
@@ -11,7 +20,7 @@
 }
 
 header{
-    background: #ff5A00;
+    background: var(--theme-primary);
     height: 90px;
     display: flex;
     align-items: center;
@@ -23,7 +32,7 @@ header{
     font-family: "Kaushan Script", cursive;
     font-weight: 700;
     font-size: 40px;
-    color: #fcfdcb;
+    color: var(--font-primary);
 
     span{
         font-size: 55px;
@@ -37,7 +46,13 @@ header nav ul{
         padding-left: 20px;
         font-weight: 600;
         cursor:pointer;
-        color: #fcfdcb;
+        color: var(--font-primary);
+        text-decoration: none;
+
+        a{
+            text-decoration: none;
+            color: var(--font-primary);
+        }
 
         i{
             font-size: 25px;
@@ -50,7 +65,7 @@ header nav ul{
             justify-content: center;
             align-items: center;
             background-color: #10c236;
-            color: #fcfdcb;
+            color: var(--font-primary);
             cursor: pointer;
             border: none;
             outline: none;
@@ -73,10 +88,25 @@ header nav ul{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    background: rgb(255, 245, 249);
+    background-color: rgba(73, 71, 71, 0.932);
+    background-blend-mode: multiply;
+    background-image: url("./logo/food-banner.jpg");
+    background-size: cover;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     height: 464px;
+
+    .order-text-top{
+        color: var(--font-primary);
+        font-size: 45px;
+    }
+    
     .order-text-bottom{
         font-weight: 400;
+        color: var(--font-primary);
+        font-size: 16px;
     }
 
     .search{
@@ -110,6 +140,7 @@ header nav ul{
 }
 
 
+
 .cards-panel{
     width: 80%;
     margin: 80px 0;
@@ -121,10 +152,12 @@ header nav ul{
 
     .card{
         width: 350px;
-        /* height: 420px; */
+        height: 100%;
         border: 2px solid #ced4da ;
         border-radius: 5px;
         /* overflow: hidden; */
+        color: #000;
+        text-decoration: none;
 
         .card-img{
             width: 100%;
@@ -135,6 +168,8 @@ header nav ul{
             }
         }
 
+        
+
         .res-details{
             display: flex;
             justify-content: flex-start;
@@ -142,6 +177,7 @@ header nav ul{
             flex-direction: column;
             gap:10px;
             padding: 10px 15px;
+            text-decoration: none;
 
             .cuisine{
                 font-weight: 400;
@@ -162,7 +198,7 @@ header nav ul{
 }
 
 .filter-btn,.sr-btn{
-    background-color: #ff5A00;
+    background-color: var(--theme-primary);
     width: 200px;
     height: 46px;
     color: #fcfdcb;
@@ -177,11 +213,16 @@ header nav ul{
     cursor: pointer;
 }
 
-
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--theme-primary);
+    color: var(--font-primary);
     padding: 20px 0;
   }
   
@@ -289,4 +330,220 @@ footer {
 
 .m-t-24 {
     margin-top: 24px;
+}
+
+
+.error-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .error-displayer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 40px;
+
+        img{
+            height: 200px;
+        }
+    }
+
+    h1,h3{
+        color:var(--theme-primary);
+        font-size: 30px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+    }
+
+
+}
+
+/*Restaurant Menus  */
+
+.menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    background-image: url(./logo/menu-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #212121;
+    mix-blend-mode: multiply;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    padding: 100px 0;
+}
+
+.menu--list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.res-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    /* background: var(--theme-primary); */
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    z-index: 1;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    /* border-radius: 15px; */
+    width: 55%;
+    
+
+    .city,h5{
+        text-align: center;
+        margin-top: 15px;
+        color: var(--font-primary);
+        
+    }
+   
+}
+
+.offline-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.restaurant-name{
+    color: var(--font-primary);
+    font-size: 50px;
+    text-align: center;
+    font-family: "Courgette", cursive;
+}
+
+/* menu */
+.res-menu--container{
+    width: 55%;
+}
+
+
+
+.menu-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff5A00;
+    height: 60px;
+    padding: 20px 40px;
+    color: var(--font-primary);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+.menu-heading{
+    text-align: center;
+    padding: 60px 0 20px 0;
+    border-bottom: 2px solid #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.menu-icon{
+      height: 65px;
+}
+.recomended-dishes-list{
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+
+        li{
+            margin-bottom: 50px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;;
+            border-radius: 10px;
+        }
+
+        li:first-child{
+            margin-top: 50px;
+        }
+
+        .menu-view-container{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            /* flex-direction: column; */
+            padding: 20px 30px;
+            gap:20px;
+            .menu-left{
+                width: 60%;
+                min-height: 200px;
+                position: relative;
+            }
+            .menu-right{
+                width: 40%;
+                height: 200px;
+                border-radius: 10px;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                }
+            }
+
+        }
+
+       
+    }
+}
+
+.menu-item-name{
+    margin-top: 20px;
+}
+
+.menu-item-price{
+    margin-top: 15px;
+}
+
+.menu-item-rating{
+    margin-top: 10px;
+    font-size: 16px;
+    i{
+        color: green;
+    }
+}
+
+.menu-desc,.menu-category{
+    margin-top: 10px;
+}
+
+.menu-kind{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:-10px;
+    right: 10px;
+    color: var(--font-primary);
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--theme-primary);
 }

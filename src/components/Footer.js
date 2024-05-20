@@ -1,20 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
+  return (
     <footer>
-      <div class="container">
+      <div className="footer-container">
         <p className="f-copy">
-          &copy; 2024 Your Company Name. All rights reserved.
+          &copy; 2024 Food Hunger. All rights reserved. ❤️❤️👌
         </p>
-        <nav className="f-nav">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
-        </nav>
       </div>
-    </footer>;
-  };
-  
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
